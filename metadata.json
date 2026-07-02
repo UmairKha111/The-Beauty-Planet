@@ -1,0 +1,8 @@
+{
+  "name": "The Beauty Planet",
+  "description": "An ultra-premium, luxury, fully animated salon and beauty academy website for The Beauty Planet Lucknow, featuring certified courses and professional beauty services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

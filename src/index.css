@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f5ecd1;
+  --color-gold-200: #ebda9e;
+  --color-gold-300: #dec263;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #bc982b;
+  --color-gold-600: #9a7920;
+  --color-gold-700: #785b1a;
+  --color-gold-800: #5a4417;
+  --color-gold-900: #423214;
+  
+  --color-luxury-black: #050505;
+  --color-luxury-dark: #0f0f0f;
+  --color-luxury-gray: #1a1a1a;
+  --color-luxury-light: #2a2a2a;
+}
+
+/* Custom styles for luxury background glow and premium typography */
+body {
+  background-color: var(--color-luxury-black);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-luxury-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-800);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-400);
+}
+
+.gold-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+}
+
+.font-serif-luxury {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.font-sans-premium {
+  font-family: var(--font-sans);
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
