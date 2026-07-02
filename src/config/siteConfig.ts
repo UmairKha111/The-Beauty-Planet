@@ -326,7 +326,7 @@ export const siteConfig = {
     {
       id: "f2",
       question: "Do I need to book an appointment in advance?",
-      answer: "While we do accommodate walk-ins when possible, we highly recommend booking an appointment online or via WhatsApp (+91 91404 88358) in advance to ensure your favorite master stylist is available.",
+      answer: "While we do accommodate walk-ins when possible, we highly recommend booking an appointment online or via WhatsApp (+91 9277438308) in advance to ensure your favorite master stylist is available.",
     },
     {
       id: "f3",
