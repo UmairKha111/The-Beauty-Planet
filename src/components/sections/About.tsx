@@ -57,7 +57,7 @@ export const About: React.FC = () => {
               Bespoke Luxury Crafted For Your Radiant Majesty
             </h3>
             <p className="text-sm sm:text-base text-gray-300 font-light leading-relaxed">
-              The Beauty Planet was established on 16 January 2026 with a mission to deliver luxury beauty experiences and world-class professional beauty education., **The Beauty Planet** (located in Jankipuram Gardens, Lucknow) has elevated luxury grooming to a majestic science. Our salon is not merely a styling lounge; it is a holistic wellness haven where hair chemistry, facial anatomy, and custom chromatic styling converge.
+              The Beautyy Planet was established on 16 January 2026 with a mission to deliver luxury beauty experiences and world-class professional beauty education., **The Beauty Planet** (located in Jankipuram Gardens, Lucknow) has elevated luxury grooming to a majestic science. Our salon is not merely a styling lounge; it is a holistic wellness haven where hair chemistry, facial anatomy, and custom chromatic styling converge.
             </p>
             <p className="text-sm sm:text-base text-gray-300 font-light leading-relaxed">
               Furthermore, through our **Professional Academy**, we act as pioneers of vocational beauty education. We believe in crafting world-class artists rather than just technical graduates. By using premium makeup, skin, and nail products, and conducting intensive hands-on practical masterclasses with actual models, our graduates enter the styling industry equipped with unmatched confidence.
@@ -123,7 +123,7 @@ export const About: React.FC = () => {
       </span>
 
       <h3 className="text-white text-xl font-serif">
-        Owner – The Beauty Planet
+        Owner – The Beautyy Planet
       </h3>
     </div>
 
