@@ -84,7 +84,7 @@ export const About: React.FC = () => {
           <div className="lg:col-span-5 relative group overflow-hidden border border-white/10 aspect-square sm:aspect-16/10 lg:aspect-square">
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500 z-10" />
             <img
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+              src="https://scontent.flko1-3.fna.fbcdn.net/v/t1.15752-9/732026419_1498153028189470_324578853942697418_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=4LMe6WFxvLYQ7kNvwGdOXjq&_nc_oc=AdpZihYmsfHYZBqDs2XAy_jFGLJfltFt8HG1xrsTz4YKvybxEwH_cyyWdR_qv31CTsfPRgtJIMW1_dnwyCO14Dl8&_nc_ad=z-m&_nc_cid=1012&_nc_zt=23&_nc_ht=scontent.flko1-3.fna&_nc_ss=7a22e&oh=03_Q7cD5wEbjvTHOTtsHUoJFTudmprYIHzlcRyBHAqvi2h2vEiJBQ&oe=6A6DF509"
               alt="The Beauty Planet luxury lounge lobby"
               className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
@@ -119,7 +119,7 @@ export const About: React.FC = () => {
 
     <div className="absolute bottom-6 left-6 right-6 bg-luxury-black/90 border border-gold-400/20 p-4">
       <span className="text-gold-400 text-[10px] uppercase tracking-[0.3em] block mb-2">
-        Founder & Beauty Artist
+      Shalini Mishra  Founder & Beauty Artist
       </span>
 
       <h3 className="text-white text-xl font-serif">
