@@ -72,7 +72,7 @@ export const siteConfig = {
   contact: {
     phone: "+91 9277438308",
     phoneDisplay: "+91 9277438308",
-    whatsapp: "https://wa.me/919277438308", // URL-friendly number without symbols
+    whatsapp: "919277438308", // URL-friendly number without symbols
     whatsappDisplay: "+91 9277438308",
     email: "shalinimishar56@gmail.com",
     address: "Shop No. 4, U.G.F, Shyam Arcade, Jankipuram Gardens, Near Tiwari Chouraha, Lucknow, Uttar Pradesh 226021",
@@ -101,11 +101,10 @@ export const siteConfig = {
     ctaBook: "Book Appointment",
     ctaServices: "Explore Services",
     ctaAcademy: "Join Academy",
-    videoPlaceholderImage: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80",
     bgImages: [
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80", // Salon luxurious interior
-      "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1920&q=80", // Elegant hair
-      "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=1920&q=80", // Royal bridal
+      "https://scontent.flko1-3.fna.fbcdn.net/v/t1.15752-9/732026419_1498153028189470_324578853942697418_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=4LMe6WFxvLYQ7kNvwGdOXjq&_nc_oc=AdpZihYmsfHYZBqDs2XAy_jFGLJfltFt8HG1xrsTz4YKvybxEwH_cyyWdR_qv31CTsfPRgtJIMW1_dnwyCO14Dl8&_nc_ad=z-m&_nc_cid=1012&_nc_zt=23&_nc_ht=scontent.flko1-3.fna&_nc_ss=7a22e&oh=03_Q7cD5wEbjvTHOTtsHUoJFTudmprYIHzlcRyBHAqvi2h2vEiJBQ&oe=6A6DF509", // Salon luxurious interior
+      "https://scontent.flko2-1.fna.fbcdn.net/v/t1.15752-9/731239210_4263056260671054_6781640551215324827_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=Mz31lN-Cw90Q7kNvwHCjwJ7&_nc_oc=AdqHwCOwORCDzaf659yIWvURHuWvgeyB9b9JOtbiH9Juov5uGipMMKKTUT3lcvwUw0lo7Z7bANEooj8eOA2G25Zz&_nc_ad=z-m&_nc_cid=1012&_nc_zt=23&_nc_ht=scontent.flko2-1.fna&_nc_ss=7a22e&oh=03_Q7cD5wFOF-r2ukhDZ8RJGJcCeuUCoy0LkT9MQ2gv-XxvTldEzA&oe=6A6DEC13", // Elegant hair
+      "https://scontent.flko1-2.fna.fbcdn.net/v/t1.15752-9/733126986_1498358194796962_7979389269349263968_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=d55eldm68cgQ7kNvwERPBvZ&_nc_oc=AdrqvBSP3E0kYbUNjBaURfa2YH0UjhMLtZ-qsnYS16NuDH42j1dJ7fpU1XIHE0eo2fBJu-p2FU3pxuEkRT4qZJ29&_nc_ad=z-m&_nc_cid=1012&_nc_zt=23&_nc_ht=scontent.flko1-2.fna&_nc_ss=7a22e&oh=03_Q7cD5wFDuv-Vb_wAgPwiigrmSaG-DjIH6XP4FpPs38y8A8NypQ&oe=6A6DD66F", // Royal bridal
     ],
   },
   services: [
@@ -115,12 +114,12 @@ export const siteConfig = {
       tagline: "Sculpted. Colored. Restructured.",
       description: "From precision couture haircuts to bespoke balayage, our global educators transform your hair into a statement of pure luxury.",
       icon: "Scissors",
-      coverImage: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80",
+      coverImage: "https://scontent.flko1-3.fna.fbcdn.net/v/t1.15752-9/733810152_2012164896059935_8205604386558258185_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=vFDQ5r1G26IQ7kNvwGAB-Po&_nc_oc=AdpgaLwXoo7IhKkaz5Ax1rpC0oqxVDOROjh9WyYP5P_C_mwTp_ut27K-GIkaRsdTD9wg7ZkMb_-xXFMOEMIJ9xIF&_nc_zt=23&_nc_ht=scontent.flko1-3.fna&_nc_ss=7b6a8&oh=03_Q7cD5wE7ZU6jNwFX_DBPN8e5X_oTbOAoSNbGkgxpZbukvFLPbA&oe=6A6DEF27",
       items: [
-        { id: "h1", name: "Couture Cut & Style", description: "Personalized haircutting consultation, luxury hair bath, and signature blowout.", price: "₹1,800+", duration: "60 mins", image: "https://images.unsplash.com/photo-1634449571010-02c29315750e?auto=format&fit=crop&w=500&q=80" },
-        { id: "h2", name: "Bespoke Balayage & Highlights", description: "Hand-painted dimensional hair coloring using premium French formulas.", price: "₹6,500+", duration: "180 mins", image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80" },
-        { id: "h3", name: "Keratin Caviar Infusion", description: "Advanced hair straightening and deep structural rebuilding with organic proteins.", price: "₹5,500+", duration: "120 mins", image: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=500&q=80" },
-        { id: "h4", name: "Signature Hair Spa Ritual", description: "Luxury scalp massage, steam, and intense nourishing lipid therapy.", price: "₹2,500+", duration: "75 mins", image: "https://images.unsplash.com/photo-1516975080664-ed2fc1fa2f0c?auto=format&fit=crop&w=500&q=80" },
+        { id: "h1", name: "Couture Cut & Style", description: "Personalized haircutting consultation, luxury hair bath, and signature blowout.", price: "₹1,800+", duration: "60 mins", image: "https://scontent.flko1-3.fna.fbcdn.net/v/t1.15752-9/733529215_1342396077224110_4150294005362103089_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=pVEiuf4yP5gQ7kNvwExCGNo&_nc_oc=AdrPs5-aiqODNBXBJ3YsPg2NWtxkIRSMN77DpLWd33CcMDuatT4zYFjZTJdCkrOcVtP36fyOHKchZ1VgVW_EAODY&_nc_zt=23&_nc_ht=scontent.flko1-3.fna&_nc_ss=7b6a8&oh=03_Q7cD5wFo4kmz30LWQ7VlIOX5CDnCdLCYspyhxPS3n0s2UoCZ-A&oe=6A6DE95B" },
+        { id: "h2", name: "Bespoke Balayage & Highlights", description: "Hand-painted dimensional hair coloring using premium French formulas.", price: "₹6,500+", duration: "180 mins", image: "https://scontent.flko2-1.fna.fbcdn.net/v/t1.15752-9/734896410_1353667023389319_987341822602035006_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=fc17b8&_nc_ohc=wQiMDJaCkbgQ7kNvwFMSSBt&_nc_oc=Adq7Ys0Hmd3zbnFHIy94DFxmpRcmyCPK09UCK0d898r0SnKnP3baD3CRWH2oyKcUCEB6l3Af5B2sJSSzRaHgUBCx&_nc_zt=23&_nc_ht=scontent.flko2-1.fna&_nc_ss=7b6a8&oh=03_Q7cD5wEb6nBlz31JC2Wb3CABc4Q5XpuzPrkiR54knQLkJXvUcQ&oe=6A6DFABD" },
+        { id: "h3", name: "Keratin Caviar Infusion", description: "Advanced hair straightening and deep structural rebuilding with organic proteins.", price: "₹5,500+", duration: "120 mins", image: "https://i.ibb.co/v6mcW39Q/Screenshot-2026-07-02-195932.png" },
+        { id: "h4", name: "Signature Hair Spa Ritual", description: "Luxury scalp massage, steam, and intense nourishing lipid therapy.", price: "₹2,500+", duration: "75 mins", image: "https://i.ibb.co/Pv6Tr43Y/b5970891-fcaa-4d8b-95ef-e4dadf8351ba.png" },
       ],
     },
     {

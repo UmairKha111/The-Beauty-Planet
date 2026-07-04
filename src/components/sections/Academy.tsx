@@ -20,16 +20,21 @@ export const Academy: React.FC<AcademyProps> = ({ onPageChange, setSelectedCours
     }
   };
 
-  const handleInquireCourse = (courseTitle: string) => {
-    if (setSelectedCourse) {
-      setSelectedCourse(courseTitle);
-    }
-    // Formulate a beautiful message to send on WhatsApp
-    const message = encodeURIComponent(
-      `Hello The Beauty Planet Academy! I would like to inquire about the course: "${courseTitle}". Please share batch timings and enrollment details.`
-    );
-    window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
-  };
+ const handleInquireCourse = (courseTitle: string) => {
+  if (setSelectedCourse) {
+    setSelectedCourse(courseTitle);
+  }
+
+  // Message text
+  const text = `Hello The Beautyy Planet Academy! I would like to inquire about the course: "${courseTitle}". Please share batch timings and enrollment details.`;
+
+  // Open WhatsApp with encoded message
+  window.open(
+    `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(text)}`,
+    "_blank",
+    "noopener,noreferrer"
+  );
+};
 
   return (
     <section className="py-24 bg-luxury-dark relative overflow-hidden">
@@ -213,7 +218,7 @@ export const Academy: React.FC<AcademyProps> = ({ onPageChange, setSelectedCours
             <div className="relative group overflow-hidden border border-white/10 aspect-16/10 lg:aspect-square">
               <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-500 z-10" />
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                src="https://i.ibb.co/Pv6Tr43Y/b5970891-fcaa-4d8b-95ef-e4dadf8351ba.png"
                 alt="The Beauty Planet Academy Training Session"
                 className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-all duration-700"
                 loading="lazy"
