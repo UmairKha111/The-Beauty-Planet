@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
           <div className="flex flex-col space-y-6">
             <div>
               <span className="font-serif text-2xl tracking-[0.2em] text-white">
-                THE BEAUTY
+                THE BEAUTYY
                 <span className="text-gold-400 font-normal">Y</span>
               </span>
 
