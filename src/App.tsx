@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { siteConfig } from "./config/siteConfig";
-
+ 
 // Layout & Core UI
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { LoadingScreen } from "./components/ui/LoadingScreen";
 import { WhatsappButton } from "./components/ui/WhatsappButton";
-
+ 
 // Page/Section Components
 import { Hero } from "./components/sections/Hero";
 import { Stats } from "./components/sections/Stats";
@@ -20,32 +20,34 @@ import { FAQ } from "./components/sections/FAQ";
 import { Contact } from "./components/sections/Contact";
 import { About } from "./components/sections/About";
 import { BookAppointment } from "./components/sections/BookAppointment";
-
+ 
+// ✅ Price List page
+import { PriceList } from "./components/sections/PriceList";
+import { PriceListButton } from "./components/ui/PriceListButton";
+ 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState("home");
   const [selectedService, setSelectedService] = useState("");
-
-  // Loading Screen Timer
+ 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2400); // Luxury 2.4s cinematic entry loading state
+    }, 2400);
     return () => clearTimeout(timer);
   }, []);
-
+ 
   const handlePageChange = (pageId: string) => {
     setCurrentPage(pageId);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
+ 
   const handleBookServiceTrigger = (serviceName: string) => {
     setSelectedService(serviceName);
     setCurrentPage("book");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  // Rendering routing states beautifully with reveal animations
+ 
   const renderPageContent = () => {
     switch (currentPage) {
       case "home":
@@ -153,7 +155,6 @@ export default function App() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <Contact />
-            
           </motion.div>
         );
       case "book":
@@ -168,46 +169,53 @@ export default function App() {
             <BookAppointment selectedService={selectedService} onPageChange={handlePageChange} />
           </motion.div>
         );
+ 
+      // ✅ Price List case — yahi missing tha!
+      case "pricelist":
+        return (
+          <motion.div
+            key="pricelist-page"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <PriceList />
+          </motion.div>
+        );
+ 
       default:
         return null;
     }
   };
-
+ 
   return (
     <>
-      {/* Cinematic Premium Loading Screen */}
       <LoadingScreen isLoading={isLoading} />
-
-      {/* Main Luxury Website Wrapper */}
+ 
       <div className="relative min-h-screen bg-luxury-black text-white selection:bg-gold-400 selection:text-black overflow-hidden flex flex-col justify-between">
         
-        {/* Abstract Background Atmospheric Glares */}
         <div className="absolute top-[10%] left-[-20%] w-[60%] h-[50%] bg-radial-gradient opacity-40 pointer-events-none z-0" />
         <div className="absolute bottom-[20%] right-[-20%] w-[60%] h-[50%] bg-radial-gradient opacity-40 pointer-events-none z-0" />
-
-        {/* Floating background glowing lines (adds depth) */}
+ 
         <div className="absolute inset-0 pointer-events-none z-0 opacity-15">
           <div className="absolute left-[15%] top-0 bottom-0 w-[1px] bg-gradient-to-b from-white/5 via-gold-400/5 to-transparent" />
           <div className="absolute right-[15%] top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-gold-400/5 to-white/5" />
         </div>
-
+ 
         <div className="relative z-10 flex flex-col min-h-screen justify-between">
           <div>
-            {/* Navigation Header */}
             <Header currentPage={currentPage} onPageChange={handlePageChange} />
-
-            {/* Content Stage Router with Animating transitions */}
             <main className="w-full">
               <AnimatePresence mode="wait">
                 {renderPageContent()}
               </AnimatePresence>
             </main>
           </div>
-
-          {/* Footer of the page */}
           <Footer onPageChange={handlePageChange} />
-          {/* Floating WhatsApp Button */}
-<WhatsappButton />
+          <WhatsappButton />
+          {/* ✅ Floating Price List Button */}
+          <PriceListButton onPageChange={handlePageChange} />
         </div>
       </div>
     </>

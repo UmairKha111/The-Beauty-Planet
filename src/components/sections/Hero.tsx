@@ -1,24 +1,33 @@
 import { motion, AnimatePresence } from "motion/react";
-import { Sparkles, Calendar, Scissors, ArrowRight } from "lucide-react";
+import { Sparkles, Calendar, Scissors, FileText, Download } from "lucide-react";
 import * as React from "react";
 import { siteConfig } from "../../config/siteConfig";
 import { PremiumButton } from "../ui/PremiumButton";
-
+ 
 interface HeroProps {
   onPageChange: (pageId: string) => void;
 }
-
+ 
 export const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
   const [currentBg, setCurrentBg] = React.useState(0);
   const images = siteConfig.hero.bgImages;
-
+ 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % images.length);
     }, 6000);
     return () => clearInterval(timer);
   }, [images.length]);
-
+ 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/pricelist.pdf';
+    link.download = 'Beautyy-Planet-Price-List.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+ 
   return (
     <section className="relative w-full min-h-[calc(100vh-120px)] flex items-center justify-center overflow-hidden bg-black py-20 px-4 sm:px-8">
       {/* Background Image Carousel with Ken Burns Zoom Effect */}
@@ -39,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-luxury-black via-luxury-black/60 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-luxury-black/90 via-transparent to-luxury-black/30" />
       </div>
-
+ 
       {/* Elegant Floating Luxury Light Sparks */}
       <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
         {[...Array(8)].map((_, i) => {
@@ -59,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
           );
         })}
       </div>
-
+ 
       {/* Hero Core Content */}
       <div className="relative z-20 max-w-5xl mx-auto text-center flex flex-col items-center">
         {/* Luxury Gold Badge */}
@@ -74,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
             {siteConfig.hero.badge}
           </span>
         </motion.div>
-
+ 
         {/* Animated Main Luxury Headline */}
         <div className="overflow-hidden mb-6 py-2">
           <motion.h1
@@ -86,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
             Indulge In <span className="italic font-normal text-gold-400 font-serif-luxury">Cinematic</span> Beauty & Artistry
           </motion.h1>
         </div>
-
+ 
         {/* Description Text */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -96,13 +105,13 @@ export const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
         >
           {siteConfig.hero.description}
         </motion.p>
-
+ 
         {/* Dynamic CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto flex-wrap justify-center"
         >
           <PremiumButton
             variant="gold"
@@ -132,8 +141,26 @@ export const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
           >
             {siteConfig.hero.ctaAcademy}
           </PremiumButton>
+ 
+          {/* ✅ Price List buttons — View + Download */}
+          <div className="flex items-center gap-3 w-full sm:w-auto">
+            <button
+              onClick={() => onPageChange("pricelist")}
+              className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-3 border border-white/20 text-white hover:border-yellow-500 hover:text-yellow-500 text-xs uppercase tracking-widest font-semibold transition-all duration-300"
+            >
+              <FileText size={14} />
+              Price List
+            </button>
+            <button
+              onClick={handleDownload}
+              className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-5 py-3 bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 text-xs uppercase tracking-widest font-semibold transition-all duration-300"
+            >
+              <Download size={14} />
+              Download
+            </button>
+          </div>
         </motion.div>
-
+ 
         {/* Scroll Down Hint / Arrow */}
         <motion.div
           initial={{ opacity: 0 }}
